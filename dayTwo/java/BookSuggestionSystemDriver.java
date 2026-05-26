@@ -27,24 +27,22 @@ public class BookSuggestionSystemDriver {
             System.out.println();
             switch (operation) {
                 case 1:
-                    int bookCount = bookSuggestionSystem.getBookCount();
-                    if (bookCount == 0) {
-                        System.out.println("There is no book in your list currently!\nAdd books to get suggestion");
-                        break;
-                    }
-
                     String option = "";
 
-                    do {
-                        String bookRecommendation = bookSuggestionSystem.suggestBook();
-                        System.out.println(bookRecommendation);
+                    try {
+                        do {
+                            String bookRecommendation = bookSuggestionSystem.suggestBook();
+                            System.out.println(bookRecommendation);
 
-                        System.out.print("Would you like to get another suggestion? (yes/no): ");
-                        option = inputCollector.nextLine();
-                        if (option.trim().equalsIgnoreCase("yes"))
-                            System.out.println("");
+                            System.out.print("Would you like to get another suggestion? (yes/no): ");
+                            option = inputCollector.nextLine();
+                            if (option.trim().equalsIgnoreCase("yes"))
+                                System.out.println("");
 
-                    } while(option.trim().equalsIgnoreCase("yes"));
+                        } while(option.trim().equalsIgnoreCase("yes"));
+                    } catch(Exception e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 case 2:
                     try {

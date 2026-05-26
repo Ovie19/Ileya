@@ -11,6 +11,9 @@ public class BookSuggestionSystem {
     }
 
     public String suggestBook() {
+        if (bookCount == 0)
+            throw new IllegalArgumentException("No books available!!!");
+
         int bookIndex = (int) (Math.random() * bookCount);
         int pageNumber = (int) (Math.random() * 100) + 1;
 
