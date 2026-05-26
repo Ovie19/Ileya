@@ -10,7 +10,6 @@ public class EncodedString {
                 count++;
 
             else {
-                System.out.print(input.charAt(index) + " ");
                 encodedString += input.charAt(index) + (count == 1 ? "" : count + "");
                 count = 1;
             }
