@@ -41,6 +41,11 @@ def get_sum_second_digit_in_odd_places_from_right_to_left(credit_card_details):
     return total
 
 def get_credit_card_validity(credit_card_details):
+    length = len(credit_card_details)
+
+    if length < 13 or length > 16:
+        return False
+
     if get_credit_card_type(credit_card_details) == "Invalid Card":
         return False
 

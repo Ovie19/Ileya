@@ -44,6 +44,9 @@ const getSumDigitInOddPlacesFromRightToLeft = (creditCardDetails) => {
 };
 
 const getCreditCardValidity = (creditCardDetails) => {
+    if (creditCardDetails.length < 13 || creditCardDetails.length > 16)
+        return false;
+
     if (getCreditCardType(creditCardDetails) == "Invalid Card")
         return false;
 

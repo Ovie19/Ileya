@@ -7,8 +7,9 @@ public class BookSuggestionSystemDriver {
 
         Scanner inputCollector = new Scanner(System.in);
         BookSuggestionSystem bookSuggestionSystem = new BookSuggestionSystem();
+        boolean keepSuggesting = true;
 
-        while (true) {
+        while (keepSuggesting) {
 
             System.out.print(
                 """

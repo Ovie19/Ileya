@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class BookSuggestionSystem {
     List<String> myBooks = new ArrayList<>();
     int bookCount = 0;

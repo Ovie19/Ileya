@@ -4,7 +4,9 @@ const prompt = require('prompt-sync')();
 
 const bookSuggestionSystem = new BookSuggestionSystem();
 
-while (true) {
+let keepSuggesting = true;
+
+while (keepSuggesting) {
     console.log(`Welcome to the Book Suggestion System!
 1. Get Suggestions
 2. Add Book

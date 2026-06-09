@@ -52,6 +52,9 @@ public class CreditCardValidator {
     }
 
     public static boolean getCreditCardValidity(String creditCard) {
+        if (creditCard.length() < 13 || creditCard.length() > 16)
+            return false;
+
         if (getCreditCardType(creditCard).equals("Invalid Card"))
             return false;
 

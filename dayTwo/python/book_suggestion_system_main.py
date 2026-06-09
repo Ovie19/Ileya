@@ -2,7 +2,9 @@ from book_suggestion_system import BookSuggestionSystem
 
 book_suggestion_system = BookSuggestionSystem()
 
-while True:
+keep_suggesting = True
+
+while keep_suggesting:
 
     print("""Welcome to the Book Suggestion System!
 1. Get Suggestions
@@ -21,7 +23,7 @@ while True:
             option = ""
 
             try:
-                while True:
+                while option.strip().lower() != "yes":
 
                     book_recommendation = book_suggestion_system.suggest_book()
                     print(book_recommendation)
